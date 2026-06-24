@@ -135,7 +135,8 @@ class MapLibreMethodChannel extends MapLibrePlatform {
     OnPlatformViewCreatedCallback onPlatformViewCreated,
     Set<Factory<OneSequenceGestureRecognizer>>? gestureRecognizers,
   ) {
-    if (defaultTargetPlatform == TargetPlatform.android) {
+    if (defaultTargetPlatform == TargetPlatform.android 
+      || defaultTargetPlatform == TargetPlatform.aurora) {
       creationParams['options']?['useHybridComposition'] = useHybridComposition;
       if (useHybridComposition) {
         return PlatformViewLink(
